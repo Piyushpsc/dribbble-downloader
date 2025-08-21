@@ -1,0 +1,39 @@
+/* Wrapper is transparent to clicks */
+.drb-dl-wrap {
+  pointer-events: none;
+}
+
+/* Button itself is clickable */
+.drb-dl-btn {
+  pointer-events: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drb-dl-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+  border-color: #ddd;
+}
+
+.drb-dl-btn.drb-success {
+  background: rgba(0, 128, 0, 0.8);
+  border-color: #0f0;
+}
+
+.drb-dl-btn.drb-error {
+  background: rgba(200, 0, 0, 0.8);
+  border-color: #f33;
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Dribbble Image Downloader",
+  "version": "1.0.0",
+  "description": "Adds a download button on Dribbble shots to save the highest-res image.",
+  "icons": { "128": "icon128.png" },
+  "permissions": ["downloads", "storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://dribbble.com/*",
+    "https://*.dribbble.com/*",
+    "https://cdn.dribbble.com/*"
+  ],
+  "background": { "service_worker": "service-worker.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://dribbble.com/*", "https://*.dribbble.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
